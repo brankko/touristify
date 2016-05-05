@@ -6,7 +6,7 @@
 		"city":"Chicago",
 		"country_abbr":"usa",
 		"country_full":"America",
-		"Age":54,
+		"age":54,
 		"lat":33,
 		"lon":44
 	},
@@ -17,7 +17,7 @@
 		"city":"Illionis",
 		"country_abbr":"usa",
 		"country_full":"America",
-		"Age":57,
+		"age":57,
 		"lat":33,
 		"lon":44
 	},
@@ -28,7 +28,7 @@
 		"city":"Chicago",
 		"country_abbr":"usa",
 		"country_full":"America",
-		"Age":44,
+		"age":44,
 		"lat":33,
 		"lon":44
 	}

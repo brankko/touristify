@@ -1,2 +1,22 @@
 <h1>Let the SHOW begin!</h1>
-{{people}}
+
+<table>
+	<tr>
+		<th>gender</th>
+		<th>name</th>
+		<th>surname</th>
+		<th>city</th>
+		<th>country_abbr</th>
+		<th>country_full</th>
+		<th>age</th>
+	</tr>
+	<tr ng-repeat="person in people">
+		<td>{{person.gender}}</td>
+		<td>{{person.name}}</td>
+		<td>{{person.surname}}</td>
+		<td>{{person.city}}</td>
+		<td>{{person.country_abbr}}</td>
+		<td>{{person.country_full}}</td>
+		<td>{{person.age}}</td>
+	</tr>
+</table>
