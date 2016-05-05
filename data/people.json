@@ -1,0 +1,35 @@
+[
+	{
+		"gender":"m",
+		"name":"John",
+		"surname":"Smith",
+		"city":"Chicago",
+		"country_abbr":"usa",
+		"country_full":"America",
+		"Age":54,
+		"lat":33,
+		"lon":44
+	},
+	{
+		"gender":"m",
+		"name":"Johnny",
+		"surname":"Smithhy",
+		"city":"Illionis",
+		"country_abbr":"usa",
+		"country_full":"America",
+		"Age":57,
+		"lat":33,
+		"lon":44
+	},
+	{
+		"gender":"m",
+		"name":"Denis",
+		"surname":"Rodman",
+		"city":"Chicago",
+		"country_abbr":"usa",
+		"country_full":"America",
+		"Age":44,
+		"lat":33,
+		"lon":44
+	},
+]
