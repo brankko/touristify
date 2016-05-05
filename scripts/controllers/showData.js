@@ -17,22 +17,13 @@
     var total =0;
     var avarage ;
 
-
-
     for (var i = 0; i < data.length; i++) {
-        total += data[i].age;
-        avarage = total/(i+1);
-    
-        console.log(avarage);
-
-
-
+      total += data[i].age;
+      avarage = total/(i+1);
     }
 
-$scope.avarage= avarage;
+    $scope.avarage= Math.round(avarage);
 
   });
-
-
-
+   
  });
