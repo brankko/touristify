@@ -1,0 +1,7 @@
+- RAW Data
+- Data as JSON
+- Display the data in tables
+- Count the data (rows)
+- Pagination with ngTable
+- Display graphics
+- Filter the data
