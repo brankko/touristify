@@ -1,7 +1,9 @@
-- RAW Data
-- Data as JSON
+- RAW Data [Branko]
+- Data as JSON [Branko]
 - Display the data in tables
-- Count the data (rows)
+  - Create controllers [Branko]
+  - Create views [Youssuff]
+- Count the data (rows) [Rudi]
 - Pagination with ngTable
 - Display graphics
 - Filter the data

@@ -24,6 +24,11 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
+      .when('/show', {
+        templateUrl: 'views/show.html',
+        controller: 'ShowDataCtrl',
+        controllerAs: 'show'
+      })
       .otherwise({
         redirectTo: '/'
       });
