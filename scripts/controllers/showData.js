@@ -20,13 +20,16 @@
 
 
     for (var i = 0; i < data.length; i++) {
-        total += data[i].Age;
+        total += data[i].age;
         avarage = total/(i+1);
     
         console.log(avarage);
+
+
+
     }
 
-
+$scope.avarage= avarage;
 
   });
 
