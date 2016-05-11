@@ -16,13 +16,23 @@
     var length = $scope.people;
     var total =0;
     var avarage ;
+    var counter=0;
+   $scope.lowLimit = 50;
 
     for (var i = 0; i < data.length; i++) {
+
       total += data[i].age;
       avarage = total/(i+1);
+
+      if( data[i].age >=  $scope.lowLimit ){
+        counter ++;
+      }
+      console.log(counter);
     }
 
     $scope.avarage= Math.round(avarage);
+
+    
 
   });
    
