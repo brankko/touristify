@@ -30,6 +30,8 @@
       console.log(counter);
     }
 
+    $scope.counter = counter;
+
     $scope.avarage= Math.round(avarage);
 
     
