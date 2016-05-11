@@ -17,7 +17,9 @@
     var total =0;
     var avarage ;
     var counter=0;
-   $scope.lowLimit = 50;
+    var counter2=0;
+    $scope.lowLimit = 55;
+    $scope.highLimit = 51;
 
     for (var i = 0; i < data.length; i++) {
 
@@ -27,10 +29,13 @@
       if( data[i].age >=  $scope.lowLimit ){
         counter ++;
       }
-      console.log(counter);
+      if( data[i].age <=  $scope.highLimit ){
+        counter2 ++;
+      }
     }
 
     $scope.counter = counter;
+    $scope.counter2 = counter2;
 
     $scope.avarage= Math.round(avarage);
 
