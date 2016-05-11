@@ -10,7 +10,7 @@
  */
 angular
   .module('touristifyApp', [
-    'ngRoute'
+    'ngRoute','rzModule'
   ])
   .config(function ($routeProvider) {
     $routeProvider

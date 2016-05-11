@@ -17,7 +17,7 @@
     var total =0;
     var avarage ;
     var counter=0;
-   $scope.lowLimit = 50;
+    $scope.lowLimit = 50;
 
     for (var i = 0; i < data.length; i++) {
 
@@ -35,7 +35,10 @@
     $scope.avarage= Math.round(avarage);
 
     
-
+    //slider code
+    $scope.slider = {
+      value: 10
+    };
   });
    
  });
