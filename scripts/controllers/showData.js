@@ -12,11 +12,11 @@
 
     //slider code
     $scope.slider = {
-      min: 18,
-      max: 24,
+      min: 50,
+      max: 70,
       options: {
-        floor: 50,
-        ceil: 70,
+        floor: 14,
+        ceil: 99,
         onChange: function(){
           $scope.count($scope.people);
         }
@@ -43,7 +43,7 @@
         if ( (data[i].age >= $scope.slider.min) && (data[i].age <= $scope.slider.max) ){
           counter ++;
         }
-        
+
       }
 
       $scope.counter = counter;
