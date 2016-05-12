@@ -10,7 +10,7 @@
 		<th>country_full</th>
 		<th>age</th>
 	</tr>
-	<tr ng-repeat="person in people">
+	<tr ng-repeat="person in people | limitTo: 10">
 		<td>{{person.gender}}</td>
 		<td>{{person.name}}</td>
 		<td>{{person.surname}}</td>
@@ -25,8 +25,11 @@
 <br>
 <span>Avarage age is:{{avarage}}</span>
 <br>
-<span>Number of people older then {{lowLimit}} is:{{counter}}</span>
+<span>Number of people older then {{slider.max}} is:{{counter}}</span>
 <br>
-<span>Number of people younger then {{highLimit}} is:{{counter2}}</span>
+<span>Number of people younger then {{slider.min}} is:{{counter2}}</span>
 <br>
-<rzslider rz-slider-model="slider.value"></rzslider>
+<rzslider
+    rz-slider-model="slider.min"
+    rz-slider-high="slider.max"
+    rz-slider-options="slider.options"></rzslider>
