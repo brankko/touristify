@@ -11,7 +11,7 @@
  .controller('ShowDataCtrl', function ($scope, $http) {
 
    $scope.people = null;
-   $http.get('data/data.php').success(function(data){
+   $http.get('data/people2.json').success(function(data){
     $scope.people = data;
     var length = $scope.people;
     var total =0;
