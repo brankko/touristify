@@ -15,8 +15,8 @@
       min: 18,
       max: 24,
       options: {
-        floor: 14,
-        ceil: 99,
+        floor: 50,
+        ceil: 70,
         onChange: function(){
           $scope.count($scope.people);
         }
@@ -31,30 +31,23 @@
 
     $scope.count = function(data){
       var length = $scope.people;
-      var total =0;
-      var avarage ;
-      var counter=0;
-      var counter2=0;
-    //    $scope.lowLimit = 55;
-    //    $scope.highLimit = 51;
+      var total = 0;
+      var avarage;
+      var counter = 0;
 
-    for (var i = 0; i < data.length; i++) {
+      for (var i = 0; i < data.length; i++) {
 
-      total += data[i].age;
-      avarage = total/(i+1);
+        total += data[i].age;
+        avarage = total/(i+1);
 
-      if( data[i].age >=  $scope.slider.max ){
-        counter ++;
+        if ( (data[i].age >= $scope.slider.min) && (data[i].age <= $scope.slider.max) ){
+          counter ++;
+        }
+        
       }
-      if( data[i].age <=  $scope.slider.min ){
-        counter2 ++;
-      }
-    }
 
-    $scope.counter = counter;
-    $scope.counter2 = counter2;
-
-    $scope.avarage= Math.round(avarage);
-  };
+      $scope.counter = counter;
+      $scope.avarage = Math.round(avarage);
+    };
 
 });
