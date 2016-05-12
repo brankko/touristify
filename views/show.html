@@ -1,5 +1,15 @@
 <h1>Let the SHOW begin!</h1>
 
+<span>Avarage age is:{{avarage}}</span>
+<br>
+<span>Number of people between {{slider.min}} and {{slider.max}} yers old is: {{counter}}</span>
+</span>
+<br>
+<rzslider
+    rz-slider-model="slider.min"
+    rz-slider-high="slider.max"
+    rz-slider-options="slider.options"></rzslider>
+<hr>
 <table class="table table-striped">
 	<tr>
 		<th>gender</th>
@@ -10,7 +20,7 @@
 		<th>country_full</th>
 		<th>age</th>
 	</tr>
-	<tr ng-repeat="person in people | limitTo: 10">
+	<tr ng-repeat="person in people | filter: filterAges | limitTo: 10">
 		<td>{{person.gender}}</td>
 		<td>{{person.name}}</td>
 		<td>{{person.surname}}</td>
@@ -23,12 +33,3 @@
 
 
 <br>
-<span>Avarage age is:{{avarage}}</span>
-<br>
-<span>Number of people between {{slider.min}} and {{slider.max}} yers old is: {{counter}}</span>
-</span>
-<br>
-<rzslider
-    rz-slider-model="slider.min"
-    rz-slider-high="slider.max"
-    rz-slider-options="slider.options"></rzslider>

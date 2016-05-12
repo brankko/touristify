@@ -50,4 +50,12 @@
       $scope.avarage = Math.round(avarage);
     };
 
+    $scope.filterAges = function(person) {
+        if ( (person.age >= $scope.slider.min) && (person.age <= $scope.slider.max) ){
+          return true;
+        } else {
+          return false;
+        }
+    };
+
 });
