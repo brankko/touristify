@@ -10,21 +10,18 @@
     rz-slider-high="slider.max"
     rz-slider-options="slider.options"></rzslider>
 <hr>
-<table class="table table-striped">
-	<tr>
-		<th>gender</th>
-		<th>name</th>
-		<th>surname</th>
-		<th>city</th>
-		<th>country_abbr</th>
-		<th>country_full</th>
-		<th>age</th>
-	</tr>
+
+<table ng-table="vm.tableParams" class="table" show-filter="false" class="table table-striped">
+
 	<tr ng-repeat="person in people | filter: filterAges | limitTo: 10">
 		<td>{{person.gender}}</td>
-		<td>{{person.name}}</td>
+		<td title="'Name'"
+			filter="{name: 'text'}"
+			sortable="'name'">{{person.name}}</td>
 		<td>{{person.surname}}</td>
-		<td>{{person.city}}</td>
+		<td title="'City'"
+			filter="{city: 'text'}"
+			sortable="'city'">{{person.city}}</td>
 		<td>{{person.country_abbr}}</td>
 		<td>{{person.country_full}}</td>
 		<td>{{person.age}}</td>

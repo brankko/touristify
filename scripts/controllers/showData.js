@@ -8,7 +8,7 @@
  * Controller of the touristifyApp
  */
  angular.module('touristifyApp')
- .controller('ShowDataCtrl', function ($scope, $http) {
+ .controller('ShowDataCtrl', function ($scope, $http, NgTableParams) {
 
     //slider code
     $scope.slider = {
@@ -57,5 +57,13 @@
           return false;
         }
     };
+
+
+
+    var self = this;
+    self.tableParams = new NgTableParams({}, {
+      dataset: $scope.people
+    });
+
 
 });
