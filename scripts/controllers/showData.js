@@ -27,6 +27,21 @@
     $http.get('data/people2.json').success(function(data){
       $scope.people = data;
       $scope.count(data);
+
+      // ngTable init
+      $scope.tableParams = new NgTableParams(
+         {
+            page: 1,
+            count: 10
+          }, 
+          {
+            total: data.length,
+            getData: function($defer, params) {
+              $defer.resolve(data.slice((params.page() - 1) * params.count(), params.page() * params.count()));
+            }
+         }
+      );
+
     });
 
     $scope.count = function(data){
@@ -50,6 +65,7 @@
       $scope.avarage = Math.round(avarage);
     };
 
+    // filtering 
     $scope.filterAges = function(person) {
         if ( (person.age >= $scope.slider.min) && (person.age <= $scope.slider.max) ){
           return true;
@@ -57,13 +73,5 @@
           return false;
         }
     };
-
-
-
-    var self = this;
-    self.tableParams = new NgTableParams({}, {
-      dataset: $scope.people
-    });
-
 
 });
