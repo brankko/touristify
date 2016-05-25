@@ -4,6 +4,6 @@
   - Create controllers [Branko]
   - Create views [Youssuff]
 - Count the data (rows) [Rudi]
-- Pagination with ngTable
-- Display graphics
+- Pagination with ngTable [Branko]
+- Display graphics [Rudi]
 - Filter the data [Rudi]

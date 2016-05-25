@@ -8,13 +8,15 @@
  *
  * Main module of the application.
  */
-angular
+var touristifyApp = angular
   .module('touristifyApp', [
     'ngRoute',
     'rzModule',
-    'ngTable'
-  ])
-  .config(function ($routeProvider) {
+    'ngTable',
+    'chart.js'
+  ]);
+
+  touristifyApp.config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',

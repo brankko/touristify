@@ -7,8 +7,7 @@
  * # MainCtrl
  * Controller of the touristifyApp
  */
-angular.module('touristifyApp')
-  .controller('MainCtrl', function () {
+touristifyApp.controller('MainCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
