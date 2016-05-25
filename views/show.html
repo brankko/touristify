@@ -1,8 +1,15 @@
 <h1>Let the SHOW begin!</h1>
 
-<canvas id="line" class="chart chart-line" chart-data="data"
-  chart-labels="labels" chart-legend="true" chart-series="series"
+<canvas id="line" class="chart chart-line" chart-data="chart1.data"
+  chart-labels="chart1.labels" chart-legend="true" chart-series="chart1.series"
   chart-click="onClick" >
+</canvas> 
+
+<p>Count of F: {{countFemale}}</p>
+<p>Count of M: {{countMale}}</p>
+
+<canvas id="pie" class="chart chart-pie"
+  chart-data="pie1.data" chart-labels="pie1.labels">
 </canvas> 
 
 <hr>
