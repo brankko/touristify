@@ -10,15 +10,25 @@
  touristifyApp.controller('ShowDataCtrl', function ($scope, $http, NgTableParams, $timeout) {
     $scope.countFemale = 0;
     $scope.countMale = 0;
-    
+
     // chart section
     $scope.chart1 = {
       labels: ["10-19", "20-29", "30-39", "40-49", "50-59", "60-69", "70-79"],
-      series: ['Age'],
+      series: ['Female', 'Male'],
       data: [
-        [65, 59, 80, 81, 56, 55, 40]
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0]
       ]
     };
+    
+    //for (var i=0; i<7; i++) {
+      // (i+1)*10 - (i+1)*10+9
+
+      // female
+      //console.log($scope.chart1.data[0][i]);
+      // male
+      //console.log($scope.chart1.data[1][i]);
+    //}
     
     // pie chart section
     $scope.pie1 = {
@@ -72,7 +82,22 @@
       $scope.countFemale = 0;
       $scope.countMale = 0;
 
+
+      $scope.chart1.data = [
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0]
+      ];
       for (var i = 0; i < data.length; i++) {
+
+        // chart1 count start
+        for (var j=0; j<7; j++) {
+          if ( (data[i].age >= ((j+1)*10)) && (data[i].age <= ((j+1)*10+9)) ){
+            if (data[j].gender == 'female') $scope.chart1.data[0][j]++;
+            if (data[j].gender == 'male') $scope.chart1.data[1][j]++;
+          }
+        }
+
+        // chart1 count start
 
         total += data[i].age;
         avarage = total/(i+1);
@@ -88,7 +113,8 @@
         }
 
       }
-
+      console.log($scope.chart1.data[0]);
+      console.log($scope.chart1.data[1]);
       $scope.counter = counter;
       $scope.avarage = Math.round(avarage);
     };
