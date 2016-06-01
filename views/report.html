@@ -1,1 +1,18 @@
 <h1>Report</h1>
+
+<rzslider
+    rz-slider-model="slider.min"
+    rz-slider-high="slider.max"
+    rz-slider-options="slider.options">
+</rzslider>
+
+<p>Avarage age is: {{avarage}}</p>
+<p>There are <strong>{{counter}} persons</strong>
+	with the age between {{slider.min}} and {{slider.max}}
+	(of which <strong>{{countFemale}} females</strong>
+	and <strong>{{countMale}} males</strong>)</p>
+<hr>
+
+<canvas id="pie" class="chart chart-pie"
+  chart-data="pie1.data" chart-labels="pie1.labels">
+</canvas> 

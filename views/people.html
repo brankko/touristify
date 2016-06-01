@@ -1,1 +1,17 @@
-<p>This is the about view.</p>
+<h1>Browse all the people</h1>
+
+<table ng-table="tableParams" class="table" show-filter="false" class="table table-striped">
+	<tr ng-repeat="person in tableParams.data">
+		<td title="'Gender'">{{person.gender}}</td>
+		<td title="'Name'"
+			filter="{name: 'text'}"
+			sortable="'name'">{{person.name}}</td>
+		<td title="'Lastname'">{{person.surname}}</td>
+		<td title="'City'"
+			filter="{city: 'text'}"
+			sortable="'city'">{{person.city}}</td>
+		<td title="'Country code'">{{person.country_abbr}}</td>
+		<td title="'Country'">{{person.country_full}}</td>
+		<td title="'Age'">{{person.age}}</td>
+	</tr>
+</table>

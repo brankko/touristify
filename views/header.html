@@ -1,0 +1,27 @@
+    <div class="header">
+      <div class="navbar navbar-default" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" href="#/">touristify</a>
+          </div>
+
+          <div class="collapse navbar-collapse" id="js-navbar-collapse">
+
+            <ul class="nav navbar-nav">
+              <li ng-class="page=='home'?'active':''"  ng-click="page='home'" class="active"><a href="#/">Home</a></li>
+              <li ng-class="page=='people'?'active':''" ng-click="page='people'"><a ng-href="#/people">People</a></li>
+              <li ng-class="page=='report'?'active':''"  ng-click="page='report'"><a ng-href="#/report">Report</a></li>
+<!--               <li ng-class="page=='show'?'active':''"  ng-click="page='show'"><a ng-href="#/show">show</a></li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
