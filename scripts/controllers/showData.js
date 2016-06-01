@@ -113,8 +113,8 @@
         }
 
       }
-      console.log($scope.chart1.data[0]);
-      console.log($scope.chart1.data[1]);
+      //console.log($scope.chart1.data[0]);
+      //console.log($scope.chart1.data[1]);
       $scope.counter = counter;
       $scope.avarage = Math.round(avarage);
     };

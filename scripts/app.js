@@ -23,10 +23,10 @@ var touristifyApp = angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
+      .when('/people', {
+        templateUrl: 'views/people.html',
+        controller: 'PeopleCtrl',
+        controllerAs: 'people'
       })
       .when('/show', {
         templateUrl: 'views/show.html',
